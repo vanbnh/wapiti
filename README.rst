@@ -21,6 +21,29 @@ Wapiti is a web vulnerability scanner written in Python.
 
 http://wapiti-scanner.github.io/
 
+Summary
+=======
+
+**Wapiti** (v3.2.10) is an open-source, black-box web application vulnerability scanner written in Python 3.
+Rather than analyzing source code, it crawls the deployed web application — extracting links, forms, and API
+endpoints — then fuzzes them with attack payloads to detect security weaknesses.
+
+Key highlights:
+
+- **Black-box scanning**: works against live applications without requiring source code access.
+- **Broad attack coverage**: detects SQL injection, XSS, command execution, XXE, SSRF, CSRF, path traversal,
+  open redirects, LDAP injection, Log4Shell, Spring4Shell, Shellshock, and many more (30+ modules).
+- **Smart crawling**: supports HTTP/HTTPS/SOCKS5 proxies, Basic/Digest/NTLM authentication, login-form
+  authentication, cookie import from Chrome/Firefox, headless-browser crawling via Playwright, and OpenAPI
+  (Swagger) REST API scanning.
+- **Flexible reporting**: generates reports in HTML, XML, JSON, TXT, and CSV formats.
+- **Session management**: scans can be suspended and resumed using SQLite-backed sessions.
+- **Extensible**: attack modules and payload lists are easy to add or customize.
+- **CMS intelligence**: fingerprints and enumerates plugins/themes for WordPress, Drupal, Joomla, SPIP, and
+  more; maps detected technologies to known CVEs via the Wappalyzer and HashThePlanet databases.
+
+Wapiti runs on Linux, macOS, and Windows (via WSL), requires Python 3.12–3.13, and is licensed under GPL-2.0.
+
 Requirements
 ============
 In order to work correctly, Wapiti needs Python 3.12 or 3.13.
